@@ -114,3 +114,13 @@ body {
   position: absolute;
   margin: 10px; /* Adds margin for white space between circles */
 }
+
+.copyright-text {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-style: italic;
+  color: #333; /* Dark color for readability */
+  z-index: 1001; /* Ensure it stays on top of other elements */
+}

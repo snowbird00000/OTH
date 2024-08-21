@@ -207,17 +207,14 @@ function showMainCircleInfo() {
     <h2>Our openness to healing</h2>
     <p>How systemic oppression, cultural and social factors shape readiness and openness to healing within BIPOC and (forced-) migrant communities in the Netherlands and Belgium.</p>
     <p>This central theme explores the overarching factors that influence the healing journey within these communities, taking into account historical contexts, cultural stigmas and the ongoing impact of systemic barriers.</p>
-    <p> <i> Please click on the surrounding circles to delve into specific aspects related to this central theme. </i> </p>
-    <p> <b>About the research:</b> 10 Black & POC therapists have been interviewed in July to August of 2024 in a semi-structured format, ranging from 30-60 minutes.</p>
+    <p><i>Please click on the surrounding circles to delve into specific aspects related to this central theme.</i></p>
+    <p><b>About the research:</b> 10 Black & POC therapists have been interviewed in July to August of 2024 in a semi-structured format, ranging from 30-60 minutes.</p>
     A thematic analysis has been conducted to crystallize re-occurring themes; the results of the analysis are embedded within a decolonial framework.
-    <p> <i> A massive thank you to all participants! - Darius </i>
-    <p> This research is copyrighted and not to be replicated or shared in any form. For permission, please contact hooman.nassimi@gmail.com <p>
+    <p><i>A massive thank you to all participants! - Darius</i></p>
+    <p>This research is copyrighted and not to be replicated or shared in any form. For permission, please contact hooman.nassimi@gmail.com.</p>
   `;
   modal.style.display = 'flex';
 }
-
-
-
 
 const colors = [
   '#f78da7', '#a3d9ff', '#ffcf71', '#d4a1ff', '#f0f78d', '#a7f7e4', '#f7a7a7'
@@ -255,8 +252,16 @@ themes.forEach((theme, index) => {
   document.body.appendChild(line);
 });
 
+// Close the modal when the 'X' is clicked
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
+});
+
+// Close the modal when clicking outside the modal content
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
 });
 
 function showModal(theme) {
@@ -273,7 +278,6 @@ function showModal(theme) {
   `;
   modal.style.display = 'flex';
 }
-
 
 window.addEventListener('resize', positionCircles);
 window.addEventListener('load', positionCircles);
