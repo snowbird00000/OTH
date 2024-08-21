@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: 'Calibri', 'Arial', sans-serif; /* Readable font family */
+  font-size: 18px; /* Appropriate base font size */
+  line-height: 1.6; /* Proper line height */
+  color: #333333; /* Dark grey text for better contrast */
+  background: linear-gradient(135deg, #f7f2e72d, #e8d7b82d, #d1bfa332, #b8a08d28, #a087708c);
+  overflow: hidden;
+  text-align: left; /* Text alignment for better readability */
+}
+
+.mind-map {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Add some padding for white space */
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.334);
+  color: white;
+  text-shadow: 
+    0.5px 0.5px 0 black, 
+    -0.5px -0.5px 0 black, 
+    -0.5px 0.5px 0 black, 
+    0.5px -0.5px 0 black;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.main-circle {
+  width: 250px;
+  height: 250px;
+  background-color: #3498db;
+  font-size: 16px;
+  padding: 20px;
+  cursor: pointer; /* Makes the main circle clickable */
+  max-width: 70ch; /* Optimal line length for text */
+}
+
+.theme-circle {
+  width: 150px;
+  height: 150px;
+  background-color: #2ecc71;
+  font-size: 16px;
+}
+
+.line {
+  position: absolute;
+  stroke: gray;
+  stroke-width: 2;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 70ch; /* Optimal line length for modal content */
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.125rem; /* Scale up font size for larger screens */
+  }
+}
+
+.mind-map {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.circle {
+  position: absolute;
+  margin: 10px; /* Adds margin for white space between circles */
+}
